@@ -23,6 +23,8 @@ def login_required(route):
 
 @pages.route("/")
 def index():
+    if session.get("email") is None:
+        return redirect(url_for(".login"))
     user_data = current_app.db.user.find_one({"email": session["email"]})
     user = User(**user_data)
 
