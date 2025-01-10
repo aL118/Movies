@@ -3,8 +3,8 @@ from datetime import datetime
 import uuid
 from flask import Blueprint, abort, current_app, redirect, render_template, request, session, url_for, flash
 from passlib.hash import pbkdf2_sha256
-from Movies.forms import ExtendedMovieForm, LoginForm, MovieForm, RegisterForm
-from Movies.models import Movie, User
+from forms import ExtendedMovieForm, LoginForm, MovieForm, RegisterForm
+from models import Movie, User
 import functools
 
 pages = Blueprint(

@@ -3,7 +3,7 @@ from flask import Flask
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
-from Movies.routes import pages
+from routes import pages
 
 load_dotenv()
 
